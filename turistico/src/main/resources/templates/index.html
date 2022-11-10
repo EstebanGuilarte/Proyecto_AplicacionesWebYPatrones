@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/"
+      xmlns="http://www.w3.org/1999/xhtml%22%3E">
+    <head>
+        <title>Turis-tico</title>
+        <meta charset="UTF-8"/>
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/button.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header_1"/>
+        <div class="contenido">
+            <div class="p">
+                <p>¡Ayúdanos a encontrar tu próximo destino!</p>
+            </div>
+            <br/>
+            <div class="p">
+                <p>¿A dónde vamos?</p>
+                <br/>
+                <button class="button" role="button"><a th:href="@{/usuario/nuevo}">¡Registrate!</a></button>
+            </div>
+        </div>
+        <footer th:replace="layout/plantilla :: footer"/>
+    </body>
+</html>

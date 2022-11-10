@@ -1,0 +1,33 @@
+CREATE SCHEMA turistico ;
+
+/*drop schema turistico;*/
+/*drop user usuario_turistico;*/
+
+create user 'usuario_turistico'@'%' identified by 'contrasena_Turistico';
+
+grant all privileges on turistico. to 'usuario_turistico'@'%';
+flush privileges;
+
+CREATE TABLE turistico.usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  nombre_usuario VARCHAR(20) NOT NULL,
+  apellidos_usuario  VARCHAR(30) NOT NULL,
+  correo_electronico VARCHAR(40) NOT NULL,
+  contrasena VARCHAR(15) NOT NULL,
+  PRIMARY KEY (id_usuario)
+   )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+CREATE TABLE turistico.lugar (
+  id_lugar INT NOT NULL AUTO_INCREMENT,
+  nombre_ubicacion VARCHAR(20) NOT NULL,
+  descripcion  VARCHAR(30) NOT NULL,
+  beneficios VARCHAR(20) NOT NULL,
+  calificacion INT NOT NULL,
+  PRIMARY KEY (id_lugar)
+   )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
