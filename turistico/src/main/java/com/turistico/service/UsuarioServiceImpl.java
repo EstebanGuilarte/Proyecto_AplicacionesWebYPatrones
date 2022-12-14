@@ -22,7 +22,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     @Transactional(readOnly = true)
     public Usuario getUsuario(Usuario usuario) {
-        return usuarioDao.findById(usuario.getIdUsuario()).orElse(null);
+        return usuarioDao.findBy(usuario.getIdUsuario()).orElse(null);
     }
 
     @Override
@@ -31,6 +31,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioDao.save(usuario);
     }
 
+    @Override
     public void delete(Usuario usuario) {
         usuarioDao.delete(usuario);
     }

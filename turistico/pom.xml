@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.5</version>
+		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.turistico</groupId>
@@ -14,7 +14,7 @@
 	<name>turistico</name>
 	<description>Proyecto de Aplicaciones Web y Patrones</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

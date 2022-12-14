@@ -5,7 +5,7 @@ CREATE SCHEMA turistico ;
 
 create user 'usuario_turistico'@'%' identified by 'contrasena_Turistico';
 
-grant all privileges on turistico. to 'usuario_turistico'@'%';
+grant all privileges on turistico.* to 'usuario_turistico'@'%';
 flush privileges;
 
 CREATE TABLE turistico.usuario (
@@ -28,6 +28,18 @@ CREATE TABLE turistico.lugar (
   calificacion INT NOT NULL,
   PRIMARY KEY (id_lugar)
    )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+CREATE TABLE turistico.reserva (
+  id_reserva INT PRIMARY KEY,
+  nombre_reserva VARCHAR(255),
+  apellidos_reserva VARCHAR(255),
+  telefono_reserva VARCHAR(255),
+  dias INT,
+  personas INT
+)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_eo_0900_ai_ci;
